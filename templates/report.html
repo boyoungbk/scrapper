@@ -1,0 +1,34 @@
+<!DOCKTYPE html>
+<html>
+  <head>
+    <title>Remote Jobs</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href={{ url_for("static", filename="css/report.css") }} />
+  </head>
+  <body>
+		<div class="wrapper">
+			<div class="top">
+				<h1>Remote Jobs</h1>
+				<h3>{{count}} {{searching_by}} jobs found.</h3>
+				<div class="link_wrapper">
+					<a class="link_btn" href="/export?word={{searching_by}}">Export to CSV</a>
+					<a class="link_btn" href="/">< Go Back </a>
+				</div>
+			</div>
+			<div class="job_container">
+				{% for job in jobs %}
+					<div class=job_item>
+						<span><strong>{{job.title}}</strong></span>
+						<span>{{job.company}}</span>
+						<span><a class="apply" href="{{job.url}}" target="_blank"><strong>Apply ></strong></a></span>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="btn-up">
+    	<button onclick="window.scrollTo(0, 0);" class="button btn-up-position">
+        <i class="fas fa-chevron-up"></i>
+    	</button>
+		</div>
+  </body>
+</html>

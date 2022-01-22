@@ -1,0 +1,30 @@
+<!DOCKTYPE html>
+<html>
+	<head>
+    <title>Remote Jobs</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
+		<link rel="stylesheet" type="text/css" href={{ url_for("static", filename="css/home.css") }} />
+		
+  </head>
+  <body>
+		<div class="wrapper">
+			<h1>Remote Jobs</h1>
+			<form class="cont" action="/report" method="get">
+   			<input type="text" class="srchFld" placeholder="i.e python" required name="word" />
+				<button class="srchBtn">Find my job</button>
+ 			</form>
+			<div class="content">
+				<div class="content__container">
+					<p class="content__container__text">Let's find</p>
+					<ul class="content__container__list">
+						<li class="content__container__list__item">python !</li>
+						<li class="content__container__list__item">react !</li>
+						<li class="content__container__list__item">java !</li>
+						<li class="content__container__list__item">vuejs !</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+  </body>
+</html>
